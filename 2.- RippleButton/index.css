@@ -1,0 +1,49 @@
+.button {
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    width: 20em;
+    border: none;
+    border-radius:  40px;
+    overflow: hidden;
+}
+
+.bg1 {
+    background: linear-gradient(90deg, #0162c8, #55e7fc);
+}
+
+.bg2 {
+    background: linear-gradient(90deg, #755bea, #ff72c0);
+}
+
+
+.cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.ripple {
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    animation: animate 500ms linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes animate {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 50em;
+        height: 50em;
+    }
+}
