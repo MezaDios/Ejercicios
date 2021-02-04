@@ -17,7 +17,11 @@ const DIRECTION_MAPS = { // desplazamiento que hara al presionar una tecla, [x,y
     'ArrowUp': [0, -1],
     'ArrowLeft': [-1, 0],
     'ArrowDown': [0, 1],
-    'ArrowRight': [1, 0]
+    'ArrowRight': [1, 0],
+    'up': [0, -1],
+    'left': [-1, 0],
+    'down': [0, 1],
+    'right': [1, 0]
 }
 
 const randomXY = () => {
@@ -235,3 +239,30 @@ window.onload = () => {
     };
 
 };
+
+var static = nipplejs.create({
+    zone: document.getElementById('joystick'),
+    mode: 'static',
+    position: { left: '50%', bottom: '10%' },
+    color: 'white',
+    shape: 'circle'
+});
+
+var joystick = static[0];
+
+joystick.on('dir:up dir:left dir:down dir:right',
+    function (evt, data) {
+
+        const direction = DIRECTION_MAPS[data.direction.angle];
+
+        if (direction) { // si la direccion existe entonces...
+
+            const [x, y] = direction;
+            if (-x !== state.direction.x && -y !== state.direction.y) {
+                state.direction.x = x;
+                state.direction.y = y;
+            }
+
+        }
+    }
+);
