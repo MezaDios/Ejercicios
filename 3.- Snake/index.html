@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+</head>
+
+<body>
+
+    <p class="text-white">Hi-score: <span id="hiscore" class="text-info">0</span></p>
+    <p class="text-white">Score: <span id="score" class="text-success">0</span></p>
+
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <button class="btn btn-primary my-2 mx-2" onclick="newGame()"><i class="fas fa-play"></i> New Game</button>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
