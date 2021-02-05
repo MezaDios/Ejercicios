@@ -341,7 +341,7 @@ window.onload = () => {
 var static = nipplejs.create({
     zone: document.getElementById('joystick'),
     mode: 'static',
-    position: { left: '50%', bottom: '10%' },
+    position: { left: '50%', bottom: '100px' },
     color: 'white',
     shape: 'circle'
 });
