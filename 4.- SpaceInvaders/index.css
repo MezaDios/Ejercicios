@@ -1,0 +1,39 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: #000 !important;
+}
+
+#canvas {
+    background: #000;
+    border: 3px solid #fff;
+    /*
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(168,77,168,0.65);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(168,77,168,0.65);
+    box-shadow: 3px 3px 5px 0px rgba(168,77,168,0.65);
+    */
+}
+
+.unselectable {
+    -webkit-user-select: none; /* Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
+}
+
+@media only screen and (max-width: 767px) {
+    #canvas {
+        width: 300px !important;
+        height: 300px !important;
+    }
+}

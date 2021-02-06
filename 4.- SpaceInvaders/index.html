@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+
+    <link rel="stylesheet" href="./index.css">
+
+    <!-- Bulma -->
+    <link rel="stylesheet" href="../node_modules/bulma/css/bulma.css">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <script src="../node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
+    <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
+
+</head>
+
+<body class="has-background-dark ">
+
+    <p class="has-text-white unselectable">Hi-score: <span id="hiscore" class="has-text-info">0</span></p>
+    <p class="has-text-white unselectable">Score: <span id="score" class="has-text-success">0</span></p>
+    <p class="has-text-white unselectable">Lives:
+        <span id="lives" class="has-text-danger-dark ml-2">
+        </span>
+    </p>
+    <p class="has-text-white unselectable">Ammunition:
+        <span id="ammunition" class="has-text-grey-lighter ml-2">
+            <i class="fas fa-thermometer-full"></i>
+            <i class="fas fa-thermometer-full"></i>
+            <i class="fas fa-thermometer-full"></i>
+            <i class="fas fa-thermometer-full"></i>
+            <i class="fas fa-thermometer-full"></i>
+            <i class="fas fa-plus"></i>
+            (100)
+        </span>
+    </p>
+
+    <canvas id="canvas" width="500" height="500"></canvas>
+
+    <button id="button" class="button is-link mt-2" onclick="newGame()">
+        <i class="fas fa-play mr-1"></i> New Game
+    </button>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
