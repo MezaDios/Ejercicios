@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MezaDios/Ejercicios#readme",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
+    "animejs": "^3.2.1",
     "bootstrap": "^5.0.0-beta1",
     "bulma": "^0.9.2",
     "materialize-css": "^1.0.0-rc.2",

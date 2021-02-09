@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="../node_modules/sweetalert2/dist/sweetalert2.css">
     <script src="../node_modules/sweetalert2/dist/sweetalert2.all.js"></script>
 
+    <!-- AnimeJS -->
+    <script src="../node_modules/animejs/lib/anime.min.js"></script>
+
 </head>
 
 <body class="has-background-dark ">
@@ -29,7 +32,7 @@
         <span id="lives" class="has-text-danger-dark ml-2">
         </span>
     </p>
-    <p class="has-text-white unselectable">Ammunition:
+    <p class="has-text-white unselectable mb-1">Ammunition:
         <span id="ammunition" class="has-text-grey-lighter ml-2">
             <i class="fas fa-thermometer-full"></i>
             <i class="fas fa-thermometer-full"></i>
@@ -37,17 +40,31 @@
             <i class="fas fa-thermometer-full"></i>
             <i class="fas fa-thermometer-full"></i>
             <i class="fas fa-plus"></i>
-            (100)
+            (150)
         </span>
     </p>
 
     <canvas id="canvas" width="500" height="500"></canvas>
 
-    <button id="button" class="button is-link mt-2" onclick="newGame()">
+    <button id="button" class="button is-link mt-2" onclick="newGame()" disabled="true">
         <i class="fas fa-play mr-1"></i> New Game
     </button>
 
-    <script src="./index.js"></script>
+    <div class="instructions has-text-white my-2 unselectable">
+        <div></div> <span>Player</span>
+        <div></div> <span>Enemy</span>
+        <div></div> <span>Player bullet</span>
+        <div></div> <span>Enemy bullet</span>
+    </div>
+
+    <div class="instructions controls has-text-white unselectable">
+        <span><i class="fas fa-arrow-left"></i></i> Move left </span>
+        <span><i class="fas fa-arrow-right"></i> Move right </span>
+        <span><i>X</i> Shoot </span>
+        <span><i>P</i> Pause </span>
+    </div>
+
+    <script defer src="./index.js"></script>
 </body>
 
 </html>
